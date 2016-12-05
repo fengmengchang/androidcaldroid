@@ -21,7 +21,7 @@ import com.roomorama.caldroid.CaldroidFragment;
 import com.roomorama.caldroid.CaldroidListener;
 
 @SuppressLint("SimpleDateFormat")
-public class CaldroidSampleActivity2 extends FragmentActivity {
+public class CaldroidSampleActivity2 extends  FragmentActivity {
     private boolean undo = false;
     private CaldroidFragment caldroidFragment;
     private CaldroidFragment dialogCaldroidFragment;

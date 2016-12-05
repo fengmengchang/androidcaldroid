@@ -4,6 +4,10 @@
 
     <item android:color="@color/caldroid_darker_gray" android:state_pressed="false" caldroid:state_date_disabled="true"/>
     <item android:color="@color/caldroid_lighter_gray" caldroid:state_date_prev_next_month="true"/>
+    <item android:color="@color/caldroid_black" caldroid:state_date_selected="true"/>
+    <item android:color="@color/caldroid_black" caldroid:state_date_selected="true" caldroid:state_date_today="true"  />
+    <item android:color="@color/caldroid_white" caldroid:state_date_selected="false" caldroid:state_date_today="true"  />
+    <item android:color="@color/caldroid_white" caldroid:state_date_selected="false"/>
     <item android:color="@color/caldroid_white"/>
 
 </selector>

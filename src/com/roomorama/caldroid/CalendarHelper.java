@@ -88,7 +88,7 @@ public class CalendarHelper {
         if (sixWeeksInCalendar) {
             int size = datetimeList.size();
             int row = size / 7;
-            int numOfDays = (6 - row) * 7;
+            int numOfDays = (6 - row) * 7;//默认5行数
             DateTime lastDateTime = datetimeList.get(size - 1);
             for (int i = 1; i <= numOfDays; i++) {
                 DateTime nextDateTime = lastDateTime.plusDays(i);

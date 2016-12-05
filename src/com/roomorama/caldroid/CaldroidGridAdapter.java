@@ -48,6 +48,7 @@ public class CaldroidGridAdapter extends BaseAdapter {
     protected DateTime today;
     protected int startDayOfWeek;
     protected boolean sixWeeksInCalendar;
+    protected boolean isShowTodayTxt;
     protected boolean squareTextViewCell;
     protected int themeResource;
     protected Resources resources;
@@ -192,6 +193,10 @@ public class CaldroidGridAdapter extends BaseAdapter {
                 .get(CaldroidFragment.START_DAY_OF_WEEK);
         sixWeeksInCalendar = (Boolean) caldroidData
                 .get(CaldroidFragment.SIX_WEEKS_IN_CALENDAR);
+        
+        isShowTodayTxt = (Boolean) caldroidData
+                .get(CaldroidFragment.IS_SHOW_TODAT_TXT);
+        
         squareTextViewCell = (Boolean) caldroidData
                 .get(CaldroidFragment.SQUARE_TEXT_VIEW_CELL);
 
@@ -324,7 +329,13 @@ public class CaldroidGridAdapter extends BaseAdapter {
         cellView.refreshDrawableState();
 
         // Set text
-        cellView.setText(String.valueOf(dateTime.getDay()));
+        if (dateTime.equals(getToday()) && isShowTodayTxt) {
+        	cellView.setText("今天");
+        }else{
+        	cellView.setText(String.valueOf(dateTime.getDay()));
+        }
+        
+//        cellView.setText(String.valueOf(dateTime.getDay()));
 
         // Set custom color if required
         setCustomResources(dateTime, cellView, cellView);
